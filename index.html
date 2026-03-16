@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>shalombrAIn Login</title>
-    <link rel="stylesheet" href="css/style.css">
+<title>ShalomBrAIn</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="login-container">
-        <img src="logo.jpg" alt="shalombrAIn Logo">
-        <h1>shalombrAIn</h1>
-        <p>Ancient Wisdom, Modern Answers</p>
 
-        <form action="ai_page.html" method="get">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
+<img src="logo.jpg" style="width:200px">
 
-        <div class="tagline">Your AI guide to Torah & Jewish wisdom</div>
-    </div>
+<h1>ShalomBrAIn</h1>
+
+<h3>Ancient Wisdom. Modern Answers.</h3>
+
+<textarea id="question" placeholder="Ask a Torah, Talmud, or Rashi question..."></textarea>
+
+<br><br>
+
+<button onclick="askAI()">Ask ShalomBrAIn</button>
+
+<h3>Answer</h3>
+
+<div id="answer"></div>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
