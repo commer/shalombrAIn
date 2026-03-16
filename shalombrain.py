@@ -4,7 +4,7 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.environ.get("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"))
 
 @app.route("/ask", methods=["POST"])
 def ask():
@@ -15,7 +15,7 @@ def ask():
     response = client.chat.completions.create(
         model="gpt-5-mini",
         messages=[
-            {"role":"system","content":"You are ShalomBrAIn, an AI trained on Torah, Talmud, and Rashi. Give thoughtful Jewish learning answers."},
+            {"role":"system","content":"You are shalombrAIn, an AI trained on Torah, Talmud, and Rashi. Give thoughtful Jewish learning answers."},
             {"role":"user","content":question}
         ]
     )
