@@ -4,7 +4,7 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
-client = OpenAI(api_key=os.environ.get("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"))
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 @app.route("/ask", methods=["POST"])
 def ask():
