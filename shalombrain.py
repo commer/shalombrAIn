@@ -3,17 +3,15 @@ from openai import OpenAI
 import os
 
 app = Flask(__name__, static_folder='static')
-
+# Serve index.html
+@app.route("/")
+def home():
+    return send_from_directory(".", "index.html")
 # Initialize OpenAI client using environment variable
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # In-memory conversation history
 conversation_history = []
-
-# Serve index.html
-@app.route("/")
-def home():
-    return send_from_directory(".", "index.html")
 
 # Ask endpoint
 @app.route("/ask", methods=["POST"])
