@@ -20,24 +20,25 @@ conversation_history = []
 def ask():
     global conversation_history
 
-    # Safely get JSON data
-    data = request.get_json()
-
-    if not data or "question" not in data:
-        return jsonify({"answer": "Invalid request."})
-
-    user_question = data["question"].strip()
-
-    if not user_question:
-        return jsonify({"answer": "Please enter a question."})
-
-    # Add user message
-    conversation_history.append({
-        "role": "user",
-        "content": user_question
-    })
-
     try:
+        # Safely get JSON data, force=True ensures it parses even if headers are missing
+        data = request.get_json(force=True)
+
+        if not data or "question" not in data:
+            return jsonify({"answer": "Invalid request."})
+
+        user_question = data["question"].strip()
+
+        if not user_question:
+            return jsonify({"answer": "Please enter a question."})
+
+        # Add user message
+        conversation_history.append({
+            "role": "user",
+            "content": user_question
+        })
+
+        # Call OpenAI API
         response = client.chat.completions.create(
             model="gpt-5-mini",  # change if needed
             messages=[
@@ -59,7 +60,9 @@ def ask():
         return jsonify({"answer": answer})
 
     except Exception as e:
-        print("ERROR:", str(e))  # shows in Render logs
+        # Print the error to Render logs for debugging
+        print("ERROR in /ask:", str(e))
+        # Always return valid JSON
         return jsonify({"answer": f"Error: {str(e)}"})
 
 # Clear conversation memory
