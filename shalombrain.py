@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from openai import OpenAI
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # Initialize OpenAI client using environment variable
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
