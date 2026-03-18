@@ -1,0 +1,129 @@
+{
+  "ref": "Rashi on Deuteronomy 31:1",
+  "heRef": "רש\"י על דברים ל״א:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [
+    "<b>וילך משה.</b> וגו':\n"
+  ],
+  "versions": [
+    {
+      "status": "locked",
+      "priority": 0.5,
+      "license": "Public Domain",
+      "versionNotes": "",
+      "formatAsPoetry": "",
+      "digitizedBySefaria": "",
+      "method": "",
+      "heversionSource": "",
+      "versionUrl": "",
+      "versionTitleInHebrew": "ובלכתך בדרך",
+      "versionNotesInHebrew": "",
+      "shortVersionTitle": "",
+      "shortVersionTitleInHebrew": "",
+      "extendedNotes": "",
+      "extendedNotesHebrew": "",
+      "purchaseInformationImage": "",
+      "purchaseInformationURL": "",
+      "hasManuallyWrappedRefs": "",
+      "language": "he",
+      "title": "Rashi on Deuteronomy",
+      "versionSource": "http://mobile.tora.ws/",
+      "versionTitle": "On Your Way",
+      "actualLanguage": "he",
+      "languageFamilyName": "hebrew",
+      "isSource": true,
+      "isPrimary": true,
+      "direction": "rtl"
+    }
+  ],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    34,
+    666,
+    1369
+  ],
+  "length": 34,
+  "heTitle": "רש\"י על דברים",
+  "titleVariants": [
+    "Rashi on Deu.",
+    "Rashi on Devarim",
+    "Rashi on Deu",
+    "Rashi on Deut.",
+    "Rashi on Deut",
+    "Rashi on Deuteronomy"
+  ],
+  "heTitleVariants": [
+    "רש\"י על דברי'",
+    "רש\"י על דברי׳",
+    "רש״י על דברים",
+    "רש”י על דברים",
+    "רש״י על דברי'",
+    "רש”י על דברי'",
+    "רש״י על דברי׳",
+    "רש”י על דברי׳",
+    "רש\"י על דברים"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    31,
+    1
+  ],
+  "toSections": [
+    31,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Deuteronomy"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Deuteronomy",
+  "heIndexTitle": "רש\"י על דברים",
+  "sectionRef": "Rashi on Deuteronomy 31:1",
+  "firstAvailableSectionRef": "Rashi on Deuteronomy 31:1",
+  "heSectionRef": "רש\"י על דברים ל״א:א׳",
+  "isSpanning": false,
+  "heVersionTitle": "On Your Way",
+  "heVersionTitleInHebrew": "ובלכתך בדרך",
+  "heShortVersionTitle": "",
+  "heShortVersionTitleInHebrew": "",
+  "heVersionSource": "http://mobile.tora.ws/",
+  "heVersionStatus": "locked",
+  "heVersionNotes": "",
+  "heExtendedNotes": "",
+  "heExtendedNotesHebrew": "",
+  "heVersionNotesInHebrew": "",
+  "heDigitizedBySefaria": false,
+  "heLicense": "Public Domain",
+  "formatHeAsPoetry": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Deuteronomy 31:2",
+  "prev": "Rashi on Deuteronomy 30:19",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}

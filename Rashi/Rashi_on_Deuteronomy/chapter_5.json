@@ -1,0 +1,84 @@
+{
+  "ref": "Rashi on Deuteronomy 5:1",
+  "heRef": "רש\"י על דברים ה׳:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [],
+  "versions": [],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    34,
+    666,
+    1369
+  ],
+  "length": 34,
+  "heTitle": "רש\"י על דברים",
+  "titleVariants": [
+    "Rashi on Deu.",
+    "Rashi on Devarim",
+    "Rashi on Deu",
+    "Rashi on Deut.",
+    "Rashi on Deut",
+    "Rashi on Deuteronomy"
+  ],
+  "heTitleVariants": [
+    "רש\"י על דברי'",
+    "רש\"י על דברי׳",
+    "רש״י על דברים",
+    "רש”י על דברים",
+    "רש״י על דברי'",
+    "רש”י על דברי'",
+    "רש״י על דברי׳",
+    "רש”י על דברי׳",
+    "רש\"י על דברים"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    5,
+    1
+  ],
+  "toSections": [
+    5,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Deuteronomy"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Deuteronomy",
+  "heIndexTitle": "רש\"י על דברים",
+  "sectionRef": "Rashi on Deuteronomy 5:1",
+  "firstAvailableSectionRef": "Rashi on Deuteronomy 5:3",
+  "heSectionRef": "רש\"י על דברים ה׳:א׳",
+  "isSpanning": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Deuteronomy 5:3",
+  "prev": "Rashi on Deuteronomy 4:47",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}

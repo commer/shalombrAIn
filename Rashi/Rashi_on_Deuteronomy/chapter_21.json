@@ -1,0 +1,84 @@
+{
+  "ref": "Rashi on Deuteronomy 21:1",
+  "heRef": "רש\"י על דברים כ״א:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [],
+  "versions": [],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    34,
+    666,
+    1369
+  ],
+  "length": 34,
+  "heTitle": "רש\"י על דברים",
+  "titleVariants": [
+    "Rashi on Deu.",
+    "Rashi on Devarim",
+    "Rashi on Deu",
+    "Rashi on Deut.",
+    "Rashi on Deut",
+    "Rashi on Deuteronomy"
+  ],
+  "heTitleVariants": [
+    "רש\"י על דברי'",
+    "רש\"י על דברי׳",
+    "רש״י על דברים",
+    "רש”י על דברים",
+    "רש״י על דברי'",
+    "רש”י על דברי'",
+    "רש״י על דברי׳",
+    "רש”י על דברי׳",
+    "רש\"י על דברים"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    21,
+    1
+  ],
+  "toSections": [
+    21,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Deuteronomy"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Deuteronomy",
+  "heIndexTitle": "רש\"י על דברים",
+  "sectionRef": "Rashi on Deuteronomy 21:1",
+  "firstAvailableSectionRef": "Rashi on Deuteronomy 21:2",
+  "heSectionRef": "רש\"י על דברים כ״א:א׳",
+  "isSpanning": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Deuteronomy 21:2",
+  "prev": "Rashi on Deuteronomy 20:20",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}
