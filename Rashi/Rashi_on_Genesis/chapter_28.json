@@ -1,0 +1,97 @@
+{
+  "ref": "Rashi on Genesis 28:1",
+  "heRef": "רש\"י על בראשית כ״ח:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [],
+  "versions": [],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    50,
+    1072,
+    2017
+  ],
+  "length": 50,
+  "heTitle": "רש\"י על בראשית",
+  "titleVariants": [
+    "Rashi on Bereshit",
+    "Rashi on Gen",
+    "Rashi on Gen.",
+    "Rashi on Breishit",
+    "Rashi on Ber",
+    "Rashi on Bereishit",
+    "Rashi on Ber.",
+    "Rashi on Beresheet",
+    "Rashi on Bereshith",
+    "Rashi on Genesis"
+  ],
+  "heTitleVariants": [
+    "רש\"י על ברא'",
+    "רש\"י על בר'",
+    "רש\"י על בר׳",
+    "רש\"י על ברא׳",
+    "רש\"י על בְּרֵאשִׁית",
+    "רש״י על בראשית",
+    "רש”י על בראשית",
+    "רש״י על ברא'",
+    "רש”י על ברא'",
+    "רש״י על בר'",
+    "רש”י על בר'",
+    "רש״י על בר׳",
+    "רש”י על בר׳",
+    "רש״י על ברא׳",
+    "רש”י על ברא׳",
+    "רש״י על בְּרֵאשִׁית",
+    "רש”י על בְּרֵאשִׁית",
+    "רש\"י על בראשית"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Genesis",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    28,
+    1
+  ],
+  "toSections": [
+    28,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Genesis"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Genesis",
+  "heIndexTitle": "רש\"י על בראשית",
+  "sectionRef": "Rashi on Genesis 28:1",
+  "firstAvailableSectionRef": "Rashi on Genesis 28:2",
+  "heSectionRef": "רש\"י על בראשית כ״ח:א׳",
+  "isSpanning": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Genesis 28:2",
+  "prev": "Rashi on Genesis 27:46",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}

@@ -1,0 +1,82 @@
+{
+  "ref": "Rashi on Exodus 40:1",
+  "heRef": "רש\"י על שמות מ׳:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [],
+  "versions": [],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    40,
+    857,
+    1818
+  ],
+  "length": 40,
+  "heTitle": "רש\"י על שמות",
+  "titleVariants": [
+    "Rashi on Exod.",
+    "Rashi on Ex.",
+    "Rashi on Exo",
+    "Rashi on Shmot",
+    "Rashi on Shemot",
+    "Rashi on Ex",
+    "Rashi on Exo.",
+    "Rashi on Exod",
+    "Rashi on Shemoth",
+    "Rashi on Exodus"
+  ],
+  "heTitleVariants": [
+    "רש״י על שמות",
+    "רש”י על שמות",
+    "רש\"י על שמות"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Exodus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    40,
+    1
+  ],
+  "toSections": [
+    40,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Exodus"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Exodus",
+  "heIndexTitle": "רש\"י על שמות",
+  "sectionRef": "Rashi on Exodus 40:1",
+  "firstAvailableSectionRef": "Rashi on Exodus 40:3",
+  "heSectionRef": "רש\"י על שמות מ׳:א׳",
+  "isSpanning": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Exodus 40:3",
+  "prev": "Rashi on Exodus 39:43",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}
