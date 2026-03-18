@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ShalomBrAIn</title>
+<title>shalombrAIn</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="text-align:center; font-family:Arial, sans-serif;">
 
-<img src="logo.jpg" style="width:200px">
+    <!-- Logo -->
+    <img src="logo.jpg" alt="shalombrAIn Logo" 
+         style="width:400px; display:block; margin:20px auto;">
 
-<h1>ShalomBrAIn</h1>
+    <h1>shalombrAIn</h1>
 
-<h3>Ancient Wisdom. Modern Answers.</h3>
+    <input type="text" id="question" placeholder="Ask a question..." style="width:300px; padding:10px;">
+    <br><br>
+    <button onclick="askQuestion()" style="padding:10px 20px;">Ask</button>
 
-<textarea id="question" placeholder="Ask a Torah, Talmud, or Rashi question..."></textarea>
-
-<br><br>
-
-<button onclick="askAI()">Ask ShalomBrAIn</button>
-
-<h3>Answer</h3>
-
-<div id="answer"></div>
-
-<script src="js/main.js"></script>
+    <p id="response"></p>
 
 </body>
 </html>
