@@ -1,0 +1,76 @@
+{
+  "ref": "Rashi on Leviticus 27:1",
+  "heRef": "רש\"י על ויקרא כ״ז:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [],
+  "versions": [],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    27,
+    621,
+    1332
+  ],
+  "length": 27,
+  "heTitle": "רש\"י על ויקרא",
+  "titleVariants": [
+    "Rashi on Vayikra",
+    "Rashi on Lev.",
+    "Rashi on Lev",
+    "Rashi on Leviticus"
+  ],
+  "heTitleVariants": [
+    "רש״י על ויקרא",
+    "רש”י על ויקרא",
+    "רש\"י על ויקרא"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Leviticus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    27,
+    1
+  ],
+  "toSections": [
+    27,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Leviticus"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Leviticus",
+  "heIndexTitle": "רש\"י על ויקרא",
+  "sectionRef": "Rashi on Leviticus 27:1",
+  "firstAvailableSectionRef": "Rashi on Leviticus 27:2",
+  "heSectionRef": "רש\"י על ויקרא כ״ז:א׳",
+  "isSpanning": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Leviticus 27:2",
+  "prev": "Rashi on Leviticus 26:46",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}

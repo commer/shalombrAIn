@@ -1,0 +1,77 @@
+{
+  "ref": "Rashi on Numbers 28:1",
+  "heRef": "רש\"י על במדבר כ״ח:א׳",
+  "isComplex": false,
+  "text": [],
+  "he": [],
+  "versions": [],
+  "textDepth": 3,
+  "sectionNames": [
+    "Chapter",
+    "Verse",
+    "Comment"
+  ],
+  "addressTypes": [
+    "Perek",
+    "Pasuk",
+    "Integer"
+  ],
+  "lengths": [
+    36,
+    687,
+    1292
+  ],
+  "length": 36,
+  "heTitle": "רש\"י על במדבר",
+  "titleVariants": [
+    "Rashi on Num.",
+    "Rashi on Num",
+    "Rashi on Bamidbar",
+    "Rashi on Bemidbar",
+    "Rashi on Numbers"
+  ],
+  "heTitleVariants": [
+    "רש״י על במדבר",
+    "רש”י על במדבר",
+    "רש\"י על במדבר"
+  ],
+  "type": "Commentary",
+  "primary_category": "Commentary",
+  "book": "Rashi on Numbers",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "order": "",
+  "sections": [
+    28,
+    1
+  ],
+  "toSections": [
+    28,
+    1
+  ],
+  "commentator": "Rashi",
+  "heCommentator": "רש\"י",
+  "collectiveTitle": "Rashi",
+  "heCollectiveTitle": "רש\"י",
+  "baseTexTitles": [
+    "Numbers"
+  ],
+  "isDependant": true,
+  "indexTitle": "Rashi on Numbers",
+  "heIndexTitle": "רש\"י על במדבר",
+  "sectionRef": "Rashi on Numbers 28:1",
+  "firstAvailableSectionRef": "Rashi on Numbers 28:2",
+  "heSectionRef": "רש\"י על במדבר כ״ח:א׳",
+  "isSpanning": false,
+  "alts": [],
+  "index_offsets_by_depth": {},
+  "next": "Rashi on Numbers 28:2",
+  "prev": "Rashi on Numbers 27:23",
+  "commentary": [],
+  "sheets": [],
+  "layer": []
+}
