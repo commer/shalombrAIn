@@ -44,7 +44,7 @@ border-radius:10px;
 
 .header img {
     width: 100%;
-    max-height: 260px; /* bigger image */
-    object-fit: contain;
+    height: 400px;
+    object-fit: cover; /* fills the space like a real banner */
     display: block;
 }
