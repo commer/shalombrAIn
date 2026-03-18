@@ -3,13 +3,14 @@
 <head>
     <title>shalombrAIn</title>
     <link rel="stylesheet" href="/static/css/style.css">
-
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
 
         .header {
@@ -17,83 +18,133 @@
             background: white;
             padding: 10px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         .header img {
             width: 100%;
             max-height: 180px;
             object-fit: contain;
-            display: block;
         }
 
-        .container {
-            margin-top: 40px;
+        .chat-container {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
         }
 
-        input {
-            width: 300px;
+        .message {
+            max-width: 70%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 12px;
+            word-wrap: break-word;
+        }
+
+        .user {
+            align-self: flex-end;
+            background-color: #007bff;
+            color: white;
+            border-bottom-right-radius: 0;
+        }
+
+        .assistant {
+            align-self: flex-start;
+            background-color: #e4e4e4;
+            color: black;
+            border-bottom-left-radius: 0;
+        }
+
+        .input-container {
+            display: flex;
+            padding: 10px;
+            background: white;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        #question {
+            flex: 1;
             padding: 10px;
             font-size: 16px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
         }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
+        .send-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 0 16px;
+            margin-left: 8px;
+            border-radius: 50%;
             cursor: pointer;
         }
 
-        #response {
-            margin-top: 20px;
-            font-size: 18px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .send-btn:hover {
+            background: #0056b3;
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Header Banner -->
-    <div class="header">
-        <img src="/static/logo.jpg" alt="shalombrAIn Logo">
-    </div>
+<div class="header">
+    <img src="/static/logo.jpg" alt="shalombrAIn Logo">
+</div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>shalombrAIn</h1>
+<div class="chat-container" id="chatContainer">
+    <!-- Chat messages appear here -->
+</div>
 
-        <input type="text" id="question" placeholder="Ask a question...">
-        <br><br>
-
-        <button onclick="askQuestion()">Ask</button>
-
-        <p id="response"></p>
-    </div>
+<div class="input-container">
+    <input type="text" id="question" placeholder="Ask a question...">
+    <button class="send-btn" onclick="sendMessage()">&#9658;</button>
+</div>
 
 <script>
-async function askQuestion() {
-    const question = document.getElementById("question").value;
-    const responseBox = document.getElementById("response");
+const chatContainer = document.getElementById("chatContainer");
+const questionInput = document.getElementById("question");
 
-    responseBox.innerText = "Thinking...";
+async function sendMessage() {
+    const question = questionInput.value.trim();
+    if (!question) return;
+
+    // Display user's message
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user";
+    userMessage.innerText = question;
+    chatContainer.appendChild(userMessage);
+    questionInput.value = "";
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+
+    // Display "Thinking..." placeholder for assistant
+    const assistantMessage = document.createElement("div");
+    assistantMessage.className = "message assistant";
+    assistantMessage.innerText = "Thinking...";
+    chatContainer.appendChild(assistantMessage);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 
     try {
         const res = await fetch("/ask", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ question: question })
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question })
         });
-
         const data = await res.json();
-        responseBox.innerText = data.answer;
-
+        assistantMessage.innerText = data.answer;
+        chatContainer.scrollTop = chatContainer.scrollHeight;
     } catch (error) {
-        responseBox.innerText = "Error: " + error.message;
+        assistantMessage.innerText = "Error: " + error.message;
     }
 }
+
+// Send message when pressing Enter
+questionInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") sendMessage();
+});
 </script>
 
 </body>
