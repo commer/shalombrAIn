@@ -1,13 +1,15 @@
-from flask import Flask, request, jsonify, send_from_directory, render_template
+from flask import Flask, request, jsonify, render_template
 from openai import OpenAI
 import os
 
 app = Flask(__name__, static_folder='static')
-# Serve index.html
+
+# Serve index.html (must be in /templates folder)
 @app.route("/")
 def home():
-   return render_template("index.html")
-# Initialize OpenAI client using environment variable
+    return render_template("index.html")
+
+# Initialize OpenAI client
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # In-memory conversation history
@@ -18,7 +20,13 @@ conversation_history = []
 def ask():
     global conversation_history
 
-    user_question = request.json.get("question")
+    # Safely get JSON data
+    data = request.get_json()
+
+    if not data or "question" not in data:
+        return jsonify({"answer": "Invalid request."})
+
+    user_question = data["question"].strip()
 
     if not user_question:
         return jsonify({"answer": "Please enter a question."})
@@ -31,7 +39,7 @@ def ask():
 
     try:
         response = client.chat.completions.create(
-            model="gpt-5-mini",
+            model="gpt-5-mini",  # change if needed
             messages=[
                 {
                     "role": "system",
@@ -51,6 +59,7 @@ def ask():
         return jsonify({"answer": answer})
 
     except Exception as e:
+        print("ERROR:", str(e))  # shows in Render logs
         return jsonify({"answer": f"Error: {str(e)}"})
 
 # Clear conversation memory
@@ -60,7 +69,7 @@ def clear():
     conversation_history = []
     return jsonify({"status": "cleared"})
 
-# Run the app
+# Run locally (Render uses Gunicorn instead)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
