@@ -2,71 +2,75 @@
 <html>
 <head>
     <title>shalombrAIn</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            height: 100vh;
         }
 
         .header {
-            width: 100%;
             background: white;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 10;
         }
 
         .header img {
             width: 100%;
-            max-height: 180px;
+            max-height: 140px;
             object-fit: contain;
         }
 
         .chat-container {
             flex: 1;
-            padding: 10px;
             overflow-y: auto;
+            padding: 10px;
+            padding-bottom: 80px; /* prevents overlap with input */
             display: flex;
             flex-direction: column;
         }
 
         .message {
-            max-width: 70%;
+            max-width: 80%;
             padding: 10px;
-            margin: 5px 0;
+            margin: 6px 0;
             border-radius: 12px;
             word-wrap: break-word;
+            font-size: 15px;
         }
 
         .user {
             align-self: flex-end;
-            background-color: #007bff;
+            background: #007bff;
             color: white;
-            border-bottom-right-radius: 0;
         }
 
         .assistant {
             align-self: flex-start;
-            background-color: #e4e4e4;
-            color: black;
-            border-bottom-left-radius: 0;
+            background: #e4e4e4;
         }
 
         .input-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
             display: flex;
             padding: 10px;
             background: white;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            border-top: 1px solid #ddd;
+            box-sizing: border-box;
         }
 
         #question {
             flex: 1;
-            padding: 10px;
+            padding: 12px;
             font-size: 16px;
             border-radius: 20px;
             border: 1px solid #ccc;
@@ -74,75 +78,94 @@
         }
 
         .send-btn {
+            margin-left: 8px;
             background: #007bff;
             color: white;
             border: none;
-            font-size: 20px;
-            padding: 0 16px;
-            margin-left: 8px;
             border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            font-size: 18px;
             cursor: pointer;
         }
 
-        .send-btn:hover {
+        .send-btn:active {
             background: #0056b3;
+        }
+
+        /* Desktop tweaks */
+        @media (min-width: 768px) {
+            .chat-container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .input-container {
+                max-width: 800px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
+
 <body>
 
 <div class="header">
-    <img src="/static/logo.jpg" alt="shalombrAIn Logo">
+    <img src="/static/logo.jpg">
 </div>
 
-<div class="chat-container" id="chatContainer">
-    <!-- Chat messages appear here -->
-</div>
+<div id="chatContainer" class="chat-container"></div>
 
 <div class="input-container">
     <input type="text" id="question" placeholder="Ask a question...">
-    <button class="send-btn" onclick="sendMessage()">&#9658;</button>
+    <button class="send-btn" onclick="sendMessage()">↑</button>
 </div>
 
 <script>
 const chatContainer = document.getElementById("chatContainer");
-const questionInput = document.getElementById("question");
+const input = document.getElementById("question");
 
 async function sendMessage() {
-    const question = questionInput.value.trim();
+    const question = input.value.trim();
     if (!question) return;
 
-    // Display user's message
-    const userMessage = document.createElement("div");
-    userMessage.className = "message user";
-    userMessage.innerText = question;
-    chatContainer.appendChild(userMessage);
-    questionInput.value = "";
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    addMessage(question, "user");
+    input.value = "";
 
-    // Display "Thinking..." placeholder for assistant
-    const assistantMessage = document.createElement("div");
-    assistantMessage.className = "message assistant";
-    assistantMessage.innerText = "Thinking...";
-    chatContainer.appendChild(assistantMessage);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    const thinking = addMessage("Thinking...", "assistant");
 
     try {
         const res = await fetch("/ask", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ question })
         });
+
         const data = await res.json();
-        assistantMessage.innerText = data.answer;
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-    } catch (error) {
-        assistantMessage.innerText = "Error: " + error.message;
+        thinking.innerText = data.answer;
+
+    } catch (err) {
+        thinking.innerText = "Error: " + err.message;
     }
+
+    scrollToBottom();
 }
 
-// Send message when pressing Enter
-questionInput.addEventListener("keydown", function(e) {
+function addMessage(text, role) {
+    const msg = document.createElement("div");
+    msg.className = "message " + role;
+    msg.innerText = text;
+    chatContainer.appendChild(msg);
+    scrollToBottom();
+    return msg;
+}
+
+function scrollToBottom() {
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+input.addEventListener("keydown", function(e) {
     if (e.key === "Enter") sendMessage();
 });
 </script>
