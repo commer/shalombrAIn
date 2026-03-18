@@ -126,6 +126,9 @@
 const chatContainer = document.getElementById("chatContainer");
 const input = document.getElementById("question");
 
+// Limit displayed conversation messages to prevent infinite growth
+const MAX_MESSAGES = 40;
+
 async function sendMessage() {
     const question = input.value.trim();
     if (!question) return;
@@ -142,8 +145,22 @@ async function sendMessage() {
             body: JSON.stringify({ question })
         });
 
-        const data = await res.json();
+        let data;
+        try {
+            data = await res.json();
+        } catch (err) {
+            const text = await res.text();
+            console.error("Non-JSON response:", text);
+            thinking.innerText = "Server returned an unexpected response.";
+            return;
+        }
+
         thinking.innerText = data.answer;
+
+        // Limit chat messages
+        while (chatContainer.children.length > MAX_MESSAGES) {
+            chatContainer.removeChild(chatContainer.firstChild);
+        }
 
     } catch (err) {
         thinking.innerText = "Error: " + err.message;
